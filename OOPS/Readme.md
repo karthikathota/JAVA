@@ -42,3 +42,51 @@ pen1.write();
 pen1.info();
 }
 ```
+
+Here the keyword new is a constructor whose main goal is to initialize object. They set the initial values for the object's attributes (also known as instance variables) and perform any necessary setup tasks.
+
+# Polymorphism
+
+Polymorphism is a fundamental concept in object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common superclass
+
+## Compile-time Polymorphism
+
+Also known as method overloading
+Occurs when you have multiple methods in the same class with the same name but different parameters
+
+```java
+class details{
+    String name;
+    int age;
+
+    public void printInfo(String name) //Method-1
+    {
+        System.out.println(name);
+    }
+    public void printInfo(int age) //Method-2
+    {
+        System.out.println(age);
+    }
+    public void printInfo(String name,int age) //Method-3
+    {
+        System.out.println(name + " " + age);
+    }
+}
+```
+
+In this based on tha parameters passed their respective method gets implemented.  
+For Example
+
+```java
+details d1=new details();
+d1.name="Karthik";
+d1.age=24;
+d1.printInfo(d1.name);
+d1.printInfo(d1.age);
+d1.printInfo(d1.name,d1.age);
+
+//Output
+Karthik
+24
+Karthik 24
+```
