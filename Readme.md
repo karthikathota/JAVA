@@ -35,6 +35,8 @@ During decleration of float number we must end the value with "F" so that the co
 
 # Strings
 
+In java strings are immutable i.e once declared cannot be edited.
+
 ## OPERATIONS ON STRINGS
 
 Print the length of the variable.
@@ -58,4 +60,79 @@ char.AT() => reuturn the value at the argument passed.
 ```java
 String name_1 = "Karthik";
 System.out.println(name_1.charAt(0));
+```
+
+Replacing characters in a string.
+
+```java
+String name_1 = "Karthik";
+String name_2= name_1.replace('a' , 's');
+System.out.println(name_2);
+```
+
+Get substring from main string.
+
+```java
+String name_1 = "sai and karthik";
+System.out.println(name_1.substring(0,3));
+```
+
+# ARRAYS
+
+It is a non-primitive data type.
+
+## Decalring an array
+
+```java
+int[] marks = new int[3];
+marks[0]=30;
+marks[1]=20;
+marks[2]=10;
+```
+
+## Operations on a Array
+
+Printing the length
+
+```java
+int[] marks = new int[3];
+marks[0]=30;
+marks[1]=20;
+marks[2]=10;
+System.out.println(marks.length);
+```
+
+Sorting an array.
+
+```java
+int[] marks = new int[3];
+marks[0]=30;
+marks[1]=20;
+marks[2]=10;
+Arrays.sort(marks);
+System.out.println(marks[0]);
+```
+
+# Casting
+
+Converting one datatype to the other
+
+## Implicit Casting
+
+Converting small data type to large. In implicit casting we donot loose any data.
+
+```java
+double p = 100.0;
+double fp = p + 18;
+System.out.println(fp);
+```
+
+## Explicit casting
+
+In this type of casting we ask the compiler to convert larger datatypes into smaller data types even though some data might be lost.
+
+```java
+int p = 100;
+int fp = p + (int)18.0;
+System.out.println(fp);
 ```
