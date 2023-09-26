@@ -53,6 +53,7 @@ Polymorphism is a fundamental concept in object-oriented programming (OOP) that 
 
 Also known as method overloading
 Occurs when you have multiple methods in the same class with the same name but different parameters
+It is compulsory to have a differentiating factor.
 
 ```java
 class details{
@@ -86,7 +87,66 @@ d1.printInfo(d1.age);
 d1.printInfo(d1.name,d1.age);
 
 //Output
-Karthik
-24
-Karthik 24
+Karthik //Method-1
+24 //Method-2
+Karthik 24 //Method-3
+```
+
+# Inheritance
+
+Inheritance is a process in which one object acquires all the properties and behaviors of its parent object automatically. In such a way, you can reuse, extend or modify the attributes and behaviors which are defined in other classes.
+
+### Single Inheritance
+
+When one class inherits another class, it is known as single level inheritance
+
+```java
+class shape{
+    String color;
+}
+class triangle extends shape{
+     public void info()
+     {
+         System.out.println("It is a "+color+" triangle");
+     }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        triangle t1= new triangle();
+        t1.color = "red";
+        t1.info();
+    }
+}
+```
+
+### Multilevel inheritance
+
+Multilevel inheritance is a process of deriving a class from another derived class
+
+```java
+class shape{
+    String color;
+}
+class size extends shape{
+    int b;
+    int l;
+}
+class triangle extends size{
+     public void info()
+     {
+         System.out.println("Area is "+((1.0/2)*l*b));
+         System.out.println("It is a "+color+" triangle");
+     }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        triangle t1= new triangle();
+        t1.color = "red";
+        t1.b=4;
+        t1.l=4;
+        t1.info();
+    }
+}
 ```
