@@ -150,3 +150,58 @@ public class Main {
     }
 }
 ```
+
+### Hierarchical inheritance
+
+Deriving more than one child(Sub class) class from one parent class(base class).
+
+```java
+class shape{
+    String color;
+}
+class size extends shape{
+    public void showinfo()
+    {
+        System.out.println("It is a big triangle");
+    }
+
+}
+class triangle extends shape{
+     public void info()
+     {
+         System.out.println("It is a "+color+" triangle");
+     }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        triangle t1= new triangle();
+        t1.color = "red";
+        t1.info();
+        size s1= new size();
+        s1.showinfo();
+    }
+}
+```
+
+### Hybrid inheritance
+
+It is a combination of Single,Multilevel,Hierarchical inheritances.
+
+## Access Modifiers
+
+### Private
+
+The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+
+### Default
+
+The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+
+### Protected
+
+The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+
+### Public
+
+The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
