@@ -151,7 +151,7 @@ test/car/Employee.java
 
 In java we can find 2 types of Packages:
 
-1. Built-in Packages.
+1. Built-in Packages.(EG:- java.lang, java.util)
 2. User-defined Packages.
 
 ## What is java.lang.object ?
@@ -159,3 +159,44 @@ In java we can find 2 types of Packages:
 In Java, java.lang.Object is the root class for all other classes.
 It is the superclass of all classes in Java and is at the top of the class hierarchy. This means
 that every class in Java, either directly or indirectly, inherits from the java.lang.Object class. It provides a set of common methods and behaviors that are available to all objects in Java.
+
+# ABSTRACT CLASS
+
+Abstract classes in Java are a fundamental concept in object-oriented programming that allow you to define common behaviors and characteristics that can be inherited by subclasses.  
+We cannot create an object for Abstract Classes but when can use the method defined by inheritance and polymorphism concepts.  
+The main purpose of abstract class is to define some methods and which can be shared with all the realted child classes.
+
+### ABSTRACT METHOD
+
+Abstract method are declared in the abstract class but donot have any implementation there but are implemented in a non-abstract class or subclass.
+
+```java
+abstract class Employee{
+    //Abstract Method
+    abstract void hello();
+
+
+    public void test()
+    {
+        System.out.println("Hello this is employee");
+    }
+}
+
+class Student extends Employee {
+    void hello(){
+        System.out.println("Hello");
+    }
+    // Method overidding
+    public void test()
+    {
+        System.out.println("This is a student");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e1=new Student();
+        e1.test();
+    }
+}
+```
