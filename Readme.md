@@ -136,3 +136,26 @@ int p = 100;
 int fp = p + (int)18.0;
 System.out.println(fp);
 ```
+
+# PACKAGES
+
+A package in Java is used to group related classes.
+Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. Packages are divided into two categories:
+
+For EG:- In the context of name conflicts.
+
+```
+test/sai/Employee.java
+test/car/Employee.java
+```
+
+In java we can find 2 types of Packages:
+
+1. Built-in Packages.
+2. User-defined Packages.
+
+## What is java.lang.object ?
+
+In Java, java.lang.Object is the root class for all other classes.
+It is the superclass of all classes in Java and is at the top of the class hierarchy. This means
+that every class in Java, either directly or indirectly, inherits from the java.lang.Object class. It provides a set of common methods and behaviors that are available to all objects in Java.
