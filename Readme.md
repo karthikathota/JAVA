@@ -171,32 +171,60 @@ The main purpose of abstract class is to define some methods and which can be sh
 Abstract method are declared in the abstract class but donot have any implementation there but are implemented in a non-abstract class or subclass.
 
 ```java
-abstract class Employee{
-    //Abstract Method
-    abstract void hello();
 
+// OUTPUT
 
-    public void test()
-    {
-        System.out.println("Hello this is employee");
-    }
-}
+This is a student
+```
 
-class Student extends Employee {
-    void hello(){
-        System.out.println("Hello");
-    }
-    // Method overidding
-    public void test()
-    {
-        System.out.println("This is a student");
-    }
-}
+# INTERFACE
 
-public class Main {
-    public static void main(String[] args) {
-        Employee e1=new Student();
-        e1.test();
+In simple words an INTERFACE in java defines methods(Abstract Method only) that a class must implement if it inherits the interface. We cannot create an object for an interface. When an class does not define the method that it inherited from INTERFACE then an error will be raised.
+
+```java
+public interface hello
+	{
+		void hello();
+		void name();
+	}
+
+	class student implements hello{
+		String name;
+		public student(String user)
+		{
+			this.name=user;
+		}
+
+		public void hello()
+		{
+			System.out.println("This is student");
+		}
+	}
+```
+
+The above code throws an error as we didnot implement all the method defined in the interface.
+
+The proper manner to implement an INTERFACE is
+
+```java
+public interface hello {
+        void message();
+        void name();
     }
-}
+
+    class student implements hello {
+        String name;
+
+        public student(String user) {
+            this.name = user;
+        }
+
+        public void message() {
+            System.out.println("This is student");
+        }
+
+        public void name() {
+            System.out.printf("This is %s", this.name);
+        }
+    }
 ```
