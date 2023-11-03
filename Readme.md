@@ -2,6 +2,19 @@
 
 ![](img/javaimg.png)
 
+## JDK(Java Development Kit)
+
+JDK is a software package that consists of the JVM, java compiler(javac) and debugger(jdb) and other essential utilities needed for developing java applications.  
+Developers use the JDK to create, compile, and debug Java applications and applets.  
+The JDK is necessary for writing, compiling, and testing Java code.
+
+## JRE (Java Runtime Environment)
+
+JRE is a software package that includes the JVM and essential libraries and components needed to run Java applications.  
+It does not include development tools (like a compiler) or source code; it's designed for running compiled Java applications.
+
+## JVM (Java Virtual Machine)
+
 ## Varaibles
 
 ```java
