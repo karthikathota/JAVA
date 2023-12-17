@@ -255,7 +255,7 @@ There can be various types of errors like
 -> Network connectivity problems  
 etc.
 
-In java there are 2 ways in whc=ich we can handle these errors during runtime.
+In java there are 2 ways in which we can handle these errors during runtime.
 
 ## try-catch block
 
@@ -272,3 +272,20 @@ catch (NumberFormatException e) {
   System.out.println("Invalid input: " + e.getMessage());
 }
 ```
+
+Generally there are 2 types of exception
+
+1. Checked Exception
+2. Unchecked Exception
+
+### Checked Exception
+
+Checked exceptions are exceptions that are checked at compile time. This means that the Java compiler ensures that these exceptions are either handled by the programmer
+using a try-catch block or declared in the method's signature using the throws keyword.  
+Eg:- IOException, ClassNotFoundException, SQLException, etc.
+
+### Unchecked Exception
+
+Unchecked exceptions are exceptions that are not checked at compile time. They usually result from programming errors,
+and the compiler does not force the programmer to handle them explicitly.  
+Eg:- NullPointerException, ArrayIndexOutOfBoundsException
