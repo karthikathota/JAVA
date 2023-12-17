@@ -15,6 +15,9 @@ It does not include development tools (like a compiler) or source code; it's des
 
 ## JVM (Java Virtual Machine)
 
+JVM is an integral part of the Java platform and is responsible for executing Java bytecode. It provides a runtime environment in which Java applications can run. JVM is platform-independent, meaning it allows Java programs to run on different operating systems without modification.  
+It performs tasks such as bytecode verification, memory management, garbage collection, and just-in-time (JIT) compilation of bytecode to native machine code.
+
 ## Varaibles
 
 ```java
@@ -240,4 +243,32 @@ public interface hello {
             System.out.printf("This is %s", this.name);
         }
     }
+```
+
+# Exception Handling
+
+Exception handling in Java is a crucial mechanism for dealing with runtime errors and unexpected situations.
+It allows your program to continue execution even when something goes wrong, preventing crashes and ensuring smooth user experience.  
+There can be various types of errors like  
+-> User Input error  
+-> File access issue  
+-> Network connectivity problems  
+etc.
+
+In java there are 2 ways in whc=ich we can handle these errors during runtime.
+
+## try-catch block
+
+The try block contains the code that might throw an exception.  
+The catch block defines how to handle specific exceptions thrown within the try block.  
+You can have multiple catch blocks to handle different types of exceptions.  
+If no catch block matches the thrown exception, the program terminates with an error message.
+
+```java
+try {
+  int x = Integer.parseInt("abc");
+}
+catch (NumberFormatException e) {
+  System.out.println("Invalid input: " + e.getMessage());
+}
 ```
