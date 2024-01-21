@@ -393,9 +393,32 @@ Thread Priority: Threads can have different priorities, influencing their chance
 4)**_Waiting_**:- This is the state where the thread has to wait for other threads to complete their execution. As there are multiple thread running in a progrma synchronization is needed, hence one thread has to wait for the next thread to complete execution.  
 5)**_Dead_**:- This is the state of the thread once it finishes its execution i.e after running state a thread goes to dead state.
 
-# MULTI THREADING
+### MULTI THREADING
 
 Multithreading is the ability of a program to execute multiple threads concurrently within a single process.
 
 Threads are lightweight processes that share the same memory space and resources within a process.
 This makes them more efficient than creating separate processes.
+
+## Thread Class Methods
+
+### Thread.sleep()
+
+This is a method that is used to halt the execution of the thread for a given period of time.  
+In java we have 2 types of sleep methods.
+
+1. **_Native Method_**:-
+
+```java
+public static native void sleep(long milliseconds) throws InterruptedException
+```
+
+The implementation of a antive method is acheived in another programming language.
+
+2.**_Non-Native Method_**:-
+
+```java
+public static void sleep(long milliseconds,int n) throws InterruptedException
+```
+
+The implementaiton of this method is done in java programming language.
