@@ -289,3 +289,94 @@ Eg:- IOException, ClassNotFoundException, SQLException, etc.
 Unchecked exceptions are exceptions that are not checked at compile time. They usually result from programming errors,
 and the compiler does not force the programmer to handle them explicitly.  
 Eg:- NullPointerException, ArrayIndexOutOfBoundsException
+
+## How to create a custom exception.
+
+When we want to create our custom exceptions in java we create a class which inherits the properties of the Exception class(for Checked exception) and
+RuntimeException(for Unchecked excetion) which are the subclasses of Throwable class.
+
+```java
+class myException extends Exception
+{
+    public myException(String message)
+    {
+        super(message);
+    }
+
+}
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.println("Enter value of n");
+            int n = sc.nextInt();
+            if (n<0)
+                throw new myException("Value of n should be greater than 0");
+        }
+        catch (myException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+```
+
+# MULTITHREADING
+
+#### What is a thread?
+
+A thread is a lightweight process, a separate path of execution within a program. It enables you to achieve true multitasking,
+performing multiple tasks seemingly concurrently within a single program.
+
+**Main Thread**: Every Java program has at least one thread, called the "main thread," which is responsible for executing the main() method.
+
+### Creating a thread
+
+We can create thread in 2 ways:-
+
+1. Extending the **_Thread Class_**
+2. Implementing **\*Runnable Interaface**
+
+#### Extending the THREAD class
+
+Create a class that extends the Thread class and override its run()
+method to contain the code you want to execute in the new thread.
+
+```java
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread thread = new MyThread();
+        thread.start();
+        System.out.println("Main thread is running...");
+    }
+}
+```
+
+#### Implementing RUNNABLE interface
+
+Create a class that implements the Runnable interface and implement the run() method. Then, create a Thread object and pass an instance of your Runnable class to its constructor.
+
+```java
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyRunnable runnable = new MyRunnable();
+        Thread thread = new Thread(runnable);
+        thread.start();
+        System.out.println("Main thread is running...");
+    }
+}
+
+```
