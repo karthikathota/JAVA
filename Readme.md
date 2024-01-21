@@ -321,7 +321,7 @@ public class Main {
 }
 ```
 
-# MULTITHREADING
+# Threads in Java
 
 #### What is a thread?
 
@@ -380,3 +380,22 @@ public class Main {
 }
 
 ```
+
+Thread Scheduler: The JVM's thread scheduler decides when to switch between threads, giving the illusion of them running simultaneously.
+
+Thread Priority: Threads can have different priorities, influencing their chances of being executed.
+
+### Life Cycle of a Thread
+
+1)**_New_**:- In this pahse, the thread is created using the thread class. It stays in this state until the program starts the thread.  
+2)**_Runnable_**:- The instance of the thread is invoked with the start method. The thread control is given to the thread scheduler and it depends on the thread scheduler to execute the thread.  
+3)**_Running_**:- When the thread starts executing, then the state of the thread is running. The scheduler picks a thread from a pool and starts executing it.  
+4)**_Waiting_**:- This is the state where the thread has to wait for other threads to complete their execution. As there are multiple thread running in a progrma synchronization is needed, hence one thread has to wait for the next thread to complete execution.  
+5)**_Dead_**:- This is the state of the thread once it finishes its execution i.e after running state a thread goes to dead state.
+
+# MULTI THREADING
+
+Multithreading is the ability of a program to execute multiple threads concurrently within a single process.
+
+Threads are lightweight processes that share the same memory space and resources within a process.
+This makes them more efficient than creating separate processes.
