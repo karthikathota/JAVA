@@ -422,3 +422,10 @@ public static void sleep(long milliseconds,int n) throws InterruptedException
 ```
 
 The implementaiton of this method is done in java programming language.
+
+### Thread.yield()
+
+The yield() method is a static method in the Thread class that suggests to the thread scheduler that the current thread is willing to pause its execution temporarily, allowing other threads of the same or higher priority to execute.
+
+The yield() method is a static method in the Thread class that suggests to the thread scheduler that the current thread is willing to pause its execution temporarily,
+allowing other threads of the same or higher priority to execute.
